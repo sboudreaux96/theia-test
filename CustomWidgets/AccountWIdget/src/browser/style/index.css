@@ -1,0 +1,14 @@
+#widget-container h2 {
+    color: var(--theia-ui-font-color1);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.accountWidgetIcon{
+    /*background-image: url('./account.png');*/
+
+    -webkit-mask: url('./account.png');
+    mask: url('./account.png');
+}
