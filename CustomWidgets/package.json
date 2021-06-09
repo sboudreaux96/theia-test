@@ -8,6 +8,10 @@
     "start:electron": "yarn rebuild:electron && yarn --cwd electron-app start",
     "watch": "lerna run --parallel watch"
   },
+  "dependencies": {
+    "@theia/core": "latest",
+    "@theia/getting-started": "latest"
+  },
   "devDependencies": {
     "lerna": "2.4.0"
   },

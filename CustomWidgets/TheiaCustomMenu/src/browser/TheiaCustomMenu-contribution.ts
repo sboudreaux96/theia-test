@@ -1,11 +1,13 @@
 import { injectable, inject } from "inversify";
-import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry, MessageService } from "@theia/core/lib/common";
+import { Command, CommandContribution, CommandRegistry, MenuContribution, MenuModelRegistry } from "@theia/core/lib/common";
 import { CommonMenus } from "@theia/core/lib/browser";
-import { GettingStartedCommand } from '@theia/getting-started/lib/browser/getting-started-contribution'
+import { GettingStartedCommand } from '@theia/getting-started/lib/browser/getting-started-contribution';
+//import { WorkspaceCommands } from '@theia/workspace/src/browser/workspace-commands';
+//import { WorkspaceCommands } from '@theia';
 
 export const TheiaCustomMenuCommand = {
     id: 'TheiaCustomMenu.command',
-    label: "Say Hello"
+    label: "Toggle 'Getting Started' Menu Item"
 };
 
 @injectable()
@@ -20,7 +22,8 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
 
     protected isEnabled: boolean = true;
     protected _command: Command = GettingStartedCommand;
-
+    //protected _command: Command = WorkspaceCommands.ADD_FOLDER;
+    //protected _command2: Command = WorkspaceCommands.OPEN;
 
     registerCommands(registry: CommandRegistry): void {
         registry.registerCommand(TheiaCustomMenuCommand, {

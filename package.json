@@ -10,6 +10,10 @@
     "**/@types/node": "12",
     "**/node-abi": "^2.18.0"
   },
+  "dependencies": {
+    "@theia/core": "latest",
+    "@theia/getting-started": "latest"
+  },
   "devDependencies": {
     "@types/chai-string": "^1.4.0",
     "@types/jsdom": "^11.0.4",
