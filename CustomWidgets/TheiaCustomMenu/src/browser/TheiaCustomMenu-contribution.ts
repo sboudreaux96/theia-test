@@ -39,6 +39,8 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
         });
     }
 
+    //Currently the toggleMenu function only makes the getting started menu item togglable. 
+    //If other menu items want to be togglable, implement changes in the 'else' section
     protected toggleMenu(isEnabled: boolean): void {
         if (isEnabled) {
             this.menuRegistry.unregisterMenuAction(this._command.id);
