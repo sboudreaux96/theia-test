@@ -1257,6 +1257,29 @@
     uuid "^8.0.0"
     vscode-languageserver-textdocument "^1.0.1"
 
+"@theia/getting-started@latest":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@theia/getting-started/-/getting-started-1.14.0.tgz#76a1cc1d989cc11f4b366349fc306066d025bd33"
+  integrity sha512-tqt7WsAGxi5OOQcU58QxMOTy3We62NrvFUrdwm5oLH6qM8K+awEELrYnRDDFbU2McPVBFh8bXjRqunv8yULMNA==
+  dependencies:
+    "@theia/core" "1.14.0"
+    "@theia/filesystem" "1.14.0"
+    "@theia/keymaps" "1.14.0"
+    "@theia/workspace" "1.14.0"
+
+"@theia/keymaps@1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@theia/keymaps/-/keymaps-1.14.0.tgz#1b2965fe3d60bcba844460d24f683bee3f7bf1a4"
+  integrity sha512-NO2YGSppWsIm840lVum0aTzZ8QzJ8UIXs9L43cdQplygzLwrTFrgQboHGF42Wwie/+73FTVqvioijP5kF0/tYQ==
+  dependencies:
+    "@theia/core" "1.14.0"
+    "@theia/monaco" "1.14.0"
+    "@theia/userstorage" "1.14.0"
+    "@theia/workspace" "1.14.0"
+    "@types/lodash.debounce" "4.0.3"
+    ajv "^6.5.3"
+    jsonc-parser "^2.2.0"
+
 "@theia/markers@1.14.0", "@theia/markers@latest":
   version "1.14.0"
   resolved "https://registry.yarnpkg.com/@theia/markers/-/markers-1.14.0.tgz#efce7a280e0e8798f2ff6e17f07cd825f22845d9"

@@ -15,7 +15,8 @@
     "@theia/terminal": "latest",
     "@theia/workspace": "latest",
     "AccountWIdget": "0.0.0",
-    "TheiaCustomMenu": "0.0.0"
+    "TheiaCustomMenu": "0.0.0",
+    "@theia/getting-started": "latest"
   },
   "devDependencies": {
     "@theia/cli": "latest"
