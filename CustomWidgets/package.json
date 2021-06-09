@@ -9,8 +9,7 @@
     "watch": "lerna run --parallel watch"
   },
   "dependencies": {
-    "@theia/core": "latest",
-    "@theia/getting-started": "latest"
+    "@theia/core": "latest"
   },
   "devDependencies": {
     "lerna": "2.4.0"
