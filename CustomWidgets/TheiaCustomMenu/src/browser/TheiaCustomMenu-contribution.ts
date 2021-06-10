@@ -4,6 +4,9 @@ import { CommonMenus, CommonCommands } from "@theia/core/lib/browser";
 import { GettingStartedCommand } from '@theia/getting-started/lib/browser/getting-started-contribution';
 import { WorkspaceCommands } from '@theia/workspace/lib/browser/workspace-commands';
 import { TerminalCommands } from '@theia/terminal/lib/browser/terminal-frontend-contribution';
+import { KeymapsCommands } from '@theia/keymaps/lib/browser/keymaps-frontend-contribution';
+import { MonacoMenus } from '@theia/monaco/lib/browser/monaco-menu';
+import { EditorMainMenu } from '@theia/editor/lib/browser/editor-menu';
 //import { CommonMenus } from '@theia/core/lib/browser/common-frontend-contribution';
 //import { WorkspaceCommands } from '@theia';
 
@@ -28,6 +31,9 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
     protected _command3: Command = WorkspaceCommands.OPEN;
     protected _command4: Command = TerminalCommands.NEW;
     protected _command5: Command = CommonCommands.OPEN_PREFERENCES;
+    protected _command6: Command = KeymapsCommands.OPEN_KEYMAPS;
+    //protected _command6: Command = TerminalCommands.NEW_ACTIVE_WORKSPACE;
+    //protected _command6: Command = MAIN_MENU_BAR;
     //protected _command2: Command = WorkspaceCommands.OPEN;
 
     registerCommands(registry: CommandRegistry): void {
@@ -48,6 +54,7 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
             this.menuRegistry.unregisterMenuAction(this._command3.id);
             this.menuRegistry.unregisterMenuAction(this._command4.id);
             this.menuRegistry.unregisterMenuAction(this._command5.id);
+            this.menuRegistry.unregisterMenuAction(this._command6.id);
         } else {
             this.menuRegistry.registerMenuAction(CommonMenus.HELP, {
                 commandId: this._command.id,
@@ -61,6 +68,14 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
             commandId: TheiaCustomMenuCommand.id,
             label: TheiaCustomMenuCommand.label
         });
+        //this.menuRegistry.unregisterMenuAction(this._command6)
+        //this.menuRegistry.unregisterMenuAction(CommonMenus.FILE.slice(-1)[0]);
+        //this.menuRegistry.unregisterMenuAction(KeymapsCommands.OPEN_KEYMAPS.id);
+        this.menuRegistry.unregisterMenuAction(MonacoMenus.SELECTION.slice(-1)[0]);
+        this.menuRegistry.unregisterMenuAction(EditorMainMenu.GO.slice(-1)[0]);
+
+
+
     }
 }
 
@@ -68,9 +83,10 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
 export class TheiaCustomMenuMenuContribution implements MenuContribution {
 
     registerMenus(menus: MenuModelRegistry): void {
-        menus.registerMenuAction(CommonMenus.EDIT_FIND, {
-            commandId: TheiaCustomMenuCommand.id,
-            label: TheiaCustomMenuCommand.label
-        });
+        /* menus.registerMenuAction(CommonMenus.EDIT_FIND, {
+             commandId: TheiaCustomMenuCommand.id,
+             label: TheiaCustomMenuCommand.label
+         });
+        menus.unregisterMenuAction(CommonMenus.FILE.slice(-1)[0]);
     }
 }*/
