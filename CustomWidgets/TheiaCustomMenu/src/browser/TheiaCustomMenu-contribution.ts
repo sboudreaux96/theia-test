@@ -32,6 +32,7 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
     protected _command4: Command = TerminalCommands.NEW;
     protected _command5: Command = CommonCommands.OPEN_PREFERENCES;
     protected _command6: Command = KeymapsCommands.OPEN_KEYMAPS;
+    protected _command7: Command = WorkspaceCommands.NEW_FOLDER;
     //protected _command6: Command = TerminalCommands.NEW_ACTIVE_WORKSPACE;
     //protected _command6: Command = MAIN_MENU_BAR;
     //protected _command2: Command = WorkspaceCommands.OPEN;
@@ -50,7 +51,6 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
     protected toggleMenu(isEnabled: boolean): void {
         if (isEnabled) {
             this.menuRegistry.unregisterMenuAction(this._command.id);
-            this.menuRegistry.unregisterMenuAction(this._command2.id);
             this.menuRegistry.unregisterMenuAction(this._command3.id);
             this.menuRegistry.unregisterMenuAction(this._command4.id);
             this.menuRegistry.unregisterMenuAction(this._command5.id);
@@ -71,8 +71,11 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
         //this.menuRegistry.unregisterMenuAction(this._command6)
         //this.menuRegistry.unregisterMenuAction(CommonMenus.FILE.slice(-1)[0]);
         //this.menuRegistry.unregisterMenuAction(KeymapsCommands.OPEN_KEYMAPS.id);
-        this.menuRegistry.unregisterMenuAction(MonacoMenus.SELECTION.slice(-1)[0]);
-        this.menuRegistry.unregisterMenuAction(EditorMainMenu.GO.slice(-1)[0]);
+        this.menuRegistry.unregisterMenuAction(MonacoMenus.SELECTION.slice(-1)[0]); //Removes "Selection" from the Main menu
+        this.menuRegistry.unregisterMenuAction(EditorMainMenu.GO.slice(-1)[0]); //Removes "Go" from the Main Menu
+        this.menuRegistry.unregisterMenuAction(this._command2.id); //remove "new file" from file menu
+        this.menuRegistry.unregisterMenuAction(this._command7.id); //remove "new folder" from file menu
+
 
 
 
