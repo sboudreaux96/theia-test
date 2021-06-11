@@ -37,6 +37,7 @@ export class TheiaCustomMenuCommandContribution implements CommandContribution, 
     //protected _command6: Command = TerminalCommands.NEW_ACTIVE_WORKSPACE;
     //protected _command6: Command = MAIN_MENU_BAR;
     //protected _command2: Command = WorkspaceCommands.OPEN;
+    //adding a comment to test a commit
 
     registerCommands(registry: CommandRegistry): void {
         registry.registerCommand(TheiaCustomMenuCommand, {
