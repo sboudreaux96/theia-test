@@ -20,6 +20,9 @@
     "electron-app",
     "TheiaCustomMenu",
     "browser-app",
+    "electron-app",
+    "SampleMenu",
+    "browser-app",
     "electron-app"
   ]
 }
