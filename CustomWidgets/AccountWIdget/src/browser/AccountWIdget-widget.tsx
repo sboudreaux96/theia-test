@@ -42,6 +42,8 @@ export class AccountWIdgetWidget extends ReactWidget {
                 <button type="submit">Submit</button>
             </form>
             <br></br>
+            <iframe width="800px" height="800px" src="http://localhost:8586"></iframe>
+            <br></br>
             <button className='theia-button secondary' title='Display Message' onClick={_a => this.displayMessage()}>Display Message</button>
         </div>
     }
